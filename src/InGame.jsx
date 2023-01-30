@@ -1,7 +1,24 @@
 import React from 'react'
+import { useEffect } from 'react';
+import { useState } from 'react';
 import './InGame.css'
 
 export default function InGame({closeGameMode, inGame, userChoice,computerChoice,result}) {
+  const [aniboard, setAniboard] = useState('')
+
+  useEffect(() =>{
+    setTimeout(() =>{
+        setAniboard('animate-winboard')
+    }, 5000)
+ }, [])
+
+ const [aniboard2, setAniboard2] = useState('')
+
+ useEffect(() =>{
+   setTimeout(() =>{
+       setAniboard2('animate-winboard2')
+   }, 5000)
+}, [])
     if(!inGame) return null;
 
     const userView = () => {
@@ -99,7 +116,7 @@ export default function InGame({closeGameMode, inGame, userChoice,computerChoice
         );
       }
     }
-    
+
   return (
     <div className='overlay'>
         <div className='modalContainer'>
@@ -111,7 +128,7 @@ export default function InGame({closeGameMode, inGame, userChoice,computerChoice
                 </div>
                 <h5 className='down'>YOU PICKED</h5>
               </div>
-                <div className='winboard two animates fadeIn' >
+                <div className={`winboard two animates fadeIn ${aniboard}`} >
                     <h3>{result}</h3>
                     <button onClick={closeGameMode} className='playagain' >PLAY AGAIN</button>
                 </div>
@@ -123,7 +140,7 @@ export default function InGame({closeGameMode, inGame, userChoice,computerChoice
                   <h5 className='down'>THE HOUSE PICKED</h5>
               </div>
             </div>
-            <div className='winboard two animates fadeIn win2' >
+            <div className={`winboard two animates fadeIn ${aniboard2}`} >
                   <h3>{result}</h3>
                   <button onClick={closeGameMode} className='playagain' >PLAY AGAIN</button>
             </div>

@@ -84,7 +84,10 @@
  }
  .winboard{
     padding: 1rem;
- 
+    display: none;
+ }
+ .animate-winboard{
+   display:block
  }
  .win2{
    display: none;
@@ -161,9 +164,9 @@
    animation-name: fadeIn;
 }
 .two{
-   -webkit-animation-delay: 3s;
-   -moz-animation-delay: 3s;
-   animation-delay: 3s;
+   -webkit-animation-delay: 2s;
+   -moz-animation-delay: 2s;
+   animation-delay: 2s;
 }
 .animates{
    -webkit-animation-duration: 2s;
@@ -251,11 +254,15 @@
       display: none;
       
    }
+   .animate-winboard2{
+      display:block
+    }
    .win2{
      display: grid;
      justify-content: center;
       align-items: center;
    }
+   
    .modalContainer{
       background: none;
       margin-top: 25vh;
