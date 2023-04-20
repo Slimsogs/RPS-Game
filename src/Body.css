@@ -18,8 +18,9 @@
 }
 .main{
   
-    display: grid;
+    display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     width: 100%;
     height: auto;
@@ -28,8 +29,10 @@
 
 }
 .div-top{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* grid-template-columns: 1fr 1fr; */
     /* flex-wrap: wrap; */
     margin-top: 5vh;
     border: 1px solid white ;
@@ -45,15 +48,19 @@
     
 } */
 .score{
-    
-    display: grid;
-    justify-content: right;
+    display: flex;
+    /* display: grid;
+    justify-content: right; */
     align-items: center;
+    margin-right: 2vh;
     gap: 0;
 }
 #src{
-    background: white;
-    margin-right: 2vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    /* margin-right: 2vh; */
     height: auto;
     width: 6vw;
     text-align: center;
@@ -85,7 +92,7 @@ h6{
     display: grid;
     justify-content: center;
     align-items: center;
-    position: relative;
+    /* position: relative; */
     height: auto;
     margin-top: 5vh;
 
@@ -252,8 +259,8 @@ h6{
 }
 @media (width <= 915px){
     .div-top{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
         /* flex-wrap: wrap; */
         margin-top: 5vh;
         border: 1px solid white ;
@@ -309,8 +316,8 @@ h6{
 }
 @media (width = 820px){
     .div-top{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
         /* flex-wrap: wrap; */
         margin-top: 5vh;
         border: 1px solid white ;
@@ -369,8 +376,8 @@ h6{
 }
 @media (width = 768px){
     .div-top{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
         /* flex-wrap: wrap; */
         margin-top: 5vh;
         border: 1px solid white ;
@@ -430,8 +437,8 @@ h6{
 }
 @media screen and (width<= 600px){
     .div-top{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
         /* flex-wrap: wrap; */
         margin-top: 5vh;
         border: 1px solid white ;
@@ -494,8 +501,8 @@ h6{
 }
 @media screen and (width<= 414px){
     .div-top{
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        justify-content: space-between;
         /* flex-wrap: wrap; */
         margin-top: 5vh;
         border: 1px solid white ;
