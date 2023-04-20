@@ -26,6 +26,7 @@
     position: fixed;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
     gap: 3rem;
  }
  .picked{
@@ -255,7 +256,9 @@
       
    }
    .animate-winboard2{
-      display:block
+      display:flex;
+      flex-direction: column;
+      align-items: center;
     }
    .win2{
      display: grid;
